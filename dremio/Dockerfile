@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM brennovich/protobuf-tools:latest
 MAINTAINER Felipe Sabino <felipe@sabino.pro>
 
 RUN apk update && \
