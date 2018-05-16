@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:7_jdk
+FROM openjdk:8
 MAINTAINER Felipe Sabino <felipe@sabino.pro>
 
 RUN apk update && \
