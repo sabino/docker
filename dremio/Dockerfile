@@ -15,14 +15,6 @@ RUN wget http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/ap
 	rm apache-maven-$MAVEN_VERSION-bin.tar.gz && \
 	mv apache-maven-$MAVEN_VERSION /usr/lib/mvn
 
-RUN cd /tmp && \
-    wget http://github.com/google/protobuf/releases/download/v2.5.0/protobuf-2.5.0.zip && \
-    unzip protobuf-2.5.0.zip && \
-    cd protobuf-2.5.0 && \
-    ./configure --prefix=/usr --disable-shared && \
-    make && make install && \
-    cd /tmp/ && rm -rf *
-
 RUN git clone https://github.com/dremio/dremio-oss.git /dremio-git && \
 	cd /dremio-git && \
 	mvn clean install -DskipTests && \
